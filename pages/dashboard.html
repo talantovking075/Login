@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../pages/dashboard.css">
+</head>
+<body>
+  <div class="main-content simple">
+  <div class="header">
+    <h1>Dashboard</h1>
+    <p>Umumiy ko'rinish</p>
+  </div>
+
+  <!-- Stats Cards -->
+  <div class="stats-grid">
+    <div class="card">
+      <div class="card-info">
+        <h3>Foydalanuvchilar</h3>
+        <h2>12,450</h2>
+        <span class="growth positive">+12%</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-info">
+        <h3>Savdo</h3>
+        <h2>3,240</h2>
+        <span class="growth positive">+8%</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-info">
+        <h3>Daromad</h3>
+        <h2>$84,250</h2>
+        <span class="growth positive">+23%</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-info">
+        <h3>O'sish</h3>
+        <h2>68%</h2>
+        <span class="growth negative">-4%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts -->
+  <div class="charts-grid">
+    <div class="chart-card">
+      <h3>Oylik Savdo</h3>
+      <canvas id="lineChart"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Kategoriyalar</h3>
+      <canvas id="barChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Recent Activity -->
+  <div class="activity-card">
+    <h3>So'nggi Faoliyat</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Foydalanuvchi</th>
+          <th>Harakat</th>
+          <th>Vaqt</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ali Valiev</td>
+          <td>Yangi buyurtma</td>
+          <td>5 daqiqa oldin</td>
+        </tr>
+        <tr>
+          <td>Marina Karimova</td>
+          <td>Profil yangilandi</td>
+          <td>12 daqiqa oldin</td>
+        </tr>
+        <tr>
+          <td>Sardor Ahmedov</td>
+          <td>Hisobot yukladi</td>
+          <td>1 soat oldin</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+  </div>
+</div>
+</body>
+</html>
