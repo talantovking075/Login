@@ -1,0 +1,201 @@
+/* Umumiy fon va matn */
+body {
+  font-family: Arial, sans-serif;
+  background: #0d1117;     /* Qora fon */
+  color: #c9d1d9;          /* Oqish matn */
+  padding: 20px;
+}
+
+/* Jadval */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #30363d;
+  padding: 12px;
+  text-align: left;
+}
+
+/* Jadval sarlavhasi */
+th {
+  background: #161b22;
+}
+
+/* Juft qatorlar */
+tr:nth-child(even) {
+  background: #161b22;
+}
+
+/* Rasmlar */
+img {
+  max-width: 80px;
+  border-radius: 8px;
+}
+
+/* Tugmalar umumiy */
+button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dashboard__view__btn {
+  background: #007bff;   /* Ko'k */
+  color: white;
+}
+
+.dashboard__edit__btn {
+  background: #ffc107;   /* Sariq */
+  color: black;
+}
+
+.dashboard__delete__btn {
+  background: #dc3545;   /* Qizil */
+  color: white;
+}
+
+/* Yuklanish xabari */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #8b949e;
+}
+.nav-button {
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.login-btn {
+  background: transparent;
+  border: 1px solid gray;
+  color: rgb(165, 154, 154);
+}
+
+.login-btn:hover {
+  background: linear-gradient(rgb(43, 41, 41) 90%, #424951 10%,);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+      body { background: #0d1117; color: #c9d1d9; min-height: 100vh; display: flex; }
+
+      /* Chap sidebar (mavjud) */
+      .sidebar-left {
+        width: 260px;
+        background: #161b22;
+        padding: 30px 20px;
+        border-right: 1px solid #30363d;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .logo { display: flex; align-items: center; gap: 15px; margin-bottom: 40px; }
+      .logo-img { width: 40px; height: 40px; background: #007bff; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px; }
+      .logo-title { font-size: 28px; font-weight: bold; color: #007bff; }
+
+      .menu-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 14px 20px;
+        color: #c9d1d9;
+        border-radius: 12px;
+        margin-bottom: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .menu-item:hover, .menu-item.active { background: #21262d; color: #007bff; }
+      .menu-item.active::before { content: ''; position: absolute; left: 0; width: 4px; height: 100%; background: #007bff; border-radius: 0 4px 4px 0; }
+
+      /* O'rta content */
+      .main-area {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        background: #161b22;
+        height: 80px;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        border-bottom: 1px solid #30363d;
+      }
+      .logout-btn {
+        padding: 10px 20px;
+        border: 1px solid #007bff;
+        background: transparent;
+        color: #007bff;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.4s;
+      }
+      .logout-btn:hover { background: #007bff; color: white; }
+
+      .content {
+        padding: 30px;
+        overflow-y: auto;
+      }
+
+      /* YANGI: Ong tarafdagi vertical menu */
+      .sidebar-right {
+        width: 80px;
+        background: #161b22;
+        border-left: 1px solid #30363d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 100;
+      }
+
+      .right-menu-item {
+        width: 50px;
+        height: 50px;
+        background: #21262d;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 24px;
+      }
+
+      .right-menu-item:hover {
+        background: #007bff;
+        color: white;
+        transform: scale(1.1);
+      }
+
+      .right-menu-item.active {
+        background: #007bff;
+        color: white;
+      }
+
+      /* Contentni o'ng menu bilan moslash uchun */
+      .content-with-right-menu {
+        margin-right: 80px; /* o'ng menu kengligi */
+      }

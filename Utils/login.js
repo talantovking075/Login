@@ -1,39 +1,28 @@
-const elForm = document.querySelector(".login-form");
-const api = "https://fakestoreapi.com/auth/login";
-
-elForm.addEventListener("submit", handleSubmit);
-
-function handleSubmit(e) {
+document.getElementById('loginForm').addEventListener('submit', function(e) {
   e.preventDefault();
 
-  const username = elForm["username"].value.trim();
-  const password = elForm["password"].value.trim();
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value;
 
-  const user = {
-    username,
-    password
-  };
+  if (username === 'kevinryan' && password === 'kev02937@') {
+    Toastify({
+      text: "Muvaffaqiyatli kirish! Dashboardga o'tkazilmoqda...",
+      duration: 2000,
+      gravity: "top",
+      position: "center",
+      backgroundColor: "#28a745"
+    }).showToast();
 
-  fetch(api, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(user)
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      const token = data.token;
-
-      
-      if (token) {
-        localStorage.setItem("token", token);
-
-
-        window.location.href = "../pages/dashboard.html";
-      }
-    });
-
-  console.log("Username:", username);
-  console.log("Password:", password);
-}
+    setTimeout(() => {
+      window.location.href = "dashboard.html";
+    }, 2100);
+  } else {
+    Toastify({
+      text: "Noto'g'ri username yoki parol!",
+      duration: 3000,
+      gravity: "top",
+      position: "center",
+      backgroundColor: "#dc3545"
+    }).showToast();
+  }
+});

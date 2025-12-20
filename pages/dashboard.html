@@ -4,91 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="../pages/dashboard.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
-  <div class="main-content simple">
-  <div class="header">
-    <h1>Dashboard</h1>
-    <p>Umumiy ko'rinish</p>
-  </div>
-
-  <!-- Stats Cards -->
-  <div class="stats-grid">
-    <div class="card">
-      <div class="card-info">
-        <h3>Foydalanuvchilar</h3>
-        <h2>12,450</h2>
-        <span class="growth positive">+12%</span>
+  <!-- Chap sidebar -->
+    <div class="sidebar-left">
+      <div class="logo">
+        <div class="logo-img">D</div>
+        <div class="logo-title">Dashboard</div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-info">
-        <h3>Savdo</h3>
-        <h2>3,240</h2>
-        <span class="growth positive">+8%</span>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-info">
-        <h3>Daromad</h3>
-        <h2>$84,250</h2>
-        <span class="growth positive">+23%</span>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-info">
-        <h3>O'sish</h3>
-        <h2>68%</h2>
-        <span class="growth negative">-4%</span>
-      </div>
-    </div>
+      <div class="menu-item active">📊 Overview</div>
+      <div class="menu-item">👨 Profile</div>
+      <div class="menu-item">🏪 Products</div>
+      <div class="menu-item">⚙️ Settings</div>
+      <nav>
+  <div style="display: flex; gap: 15px; align-items: center;">
+    <a href="index.html" class="nav-button login-btn">Login</a>
   </div>
-
-  <!-- Charts -->
-  <div class="charts-grid">
-    <div class="chart-card">
-      <h3>Oylik Savdo</h3>
-      <canvas id="lineChart"></canvas>
+</nav>
     </div>
-    <div class="chart-card">
-      <h3>Kategoriyalar</h3>
-      <canvas id="barChart"></canvas>
-    </div>
-  </div>
-
-  <!-- Recent Activity -->
-  <div class="activity-card">
-    <h3>So'nggi Faoliyat</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Foydalanuvchi</th>
-          <th>Harakat</th>
-          <th>Vaqt</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Ali Valiev</td>
-          <td>Yangi buyurtma</td>
-          <td>5 daqiqa oldin</td>
-        </tr>
-        <tr>
-          <td>Marina Karimova</td>
-          <td>Profil yangilandi</td>
-          <td>12 daqiqa oldin</td>
-        </tr>
-        <tr>
-          <td>Sardor Ahmedov</td>
-          <td>Hisobot yukladi</td>
-          <td>1 soat oldin</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-  </div>
-</div>
+  <<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Category</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Image</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+  <script src="../Utils/dashboard.js"></script>
 </body>
 </html>
